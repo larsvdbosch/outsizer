@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SignInPage() {
     return (
-        <main className="bg-[#FAFAFA] flex flex-col items-center justify-center min-h-screen">
+        <div className="bg-[#FAFAFA] flex flex-col items-center justify-center min-h-screen">
             <Logo className="mb-8" />
             <form action={signInAction} className="flex flex-col gap-4">
                 <input className="input-form" type="email" name="email" placeholder="Email" required />
@@ -13,6 +13,6 @@ export default function SignInPage() {
                     Inloggen
                 </Button>
             </form>
-        </main>
+        </div>
     )
 }

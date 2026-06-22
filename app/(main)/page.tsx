@@ -2,7 +2,7 @@ import { Hero } from "@/components/section/hero";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Hero
         hasTagline={true}
         tagline="BETA JUST RELEASED"
@@ -11,6 +11,6 @@ export default function Home() {
         buttonLabel="Probeer het nu"
         buttonHref="/aanmelden"
       />
-    </main>
+    </div>
   );
 }

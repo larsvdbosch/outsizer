@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SignUpPage() {
     return (
-        <main className="bg-[#FAFAFA] flex flex-col items-center justify-center min-h-screen">
+        <div className="bg-[#FAFAFA] flex flex-col items-center justify-center min-h-screen">
             <Logo className="mb-8" />
             <form action={signUpAction} className="flex flex-col gap-4">
                 <input className="input-form" type="text" name="name" placeholder="Naam" required />
@@ -14,6 +14,6 @@ export default function SignUpPage() {
                     Aanmelden
                 </Button>
             </form>
-        </main>
+        </div>
     )
 }

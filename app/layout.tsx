@@ -30,7 +30,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <NextTopLoader color="var(--color-accent)" height={4} showSpinner={false} />
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
