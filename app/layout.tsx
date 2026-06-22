@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Navbar } from "@/components/navbar";
+import "./globals.css"
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,8 +29,8 @@ export default function RootLayout({
       className={`${inter.className} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        <main>{children}</main>
+        <NextTopLoader color="var(--color-accent)" height={4} showSpinner={false} />
+        {children}
       </body>
     </html>
   );

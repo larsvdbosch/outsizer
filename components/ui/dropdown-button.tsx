@@ -8,13 +8,16 @@ type DropdownItem = {
 export type DropdownMenuProps = {
     label: string;
     item: DropdownItem[];
+    className?: string;
+    children?: React.ReactNode;
 }
 
+import { clsx } from "clsx";
 import Image from "next/image"
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export function DropdownMenu({ item, label }: DropdownMenuProps) {
+export function DropdownMenu({ item, label, className, children }: DropdownMenuProps) {
     const [open, setOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -43,9 +46,9 @@ export function DropdownMenu({ item, label }: DropdownMenuProps) {
     }, []);
 
     return (
-        <div ref={wrapperRef} className="relative inline-block">
+        <div ref={wrapperRef} className={clsx("relative", className)}>
             <button
-                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium bg-white w-fit rounded-xl transition ease-out duration-150 border border-transparent hover:border-neutral-200 cursor-pointer"
+                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium bg-white w-fit rounded-xl transition-[border-color] ease-in-out duration-150 border border-transparent hover:border-neutral-200 cursor-pointer"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-haspopup="menu"
                 aria-expanded={open}
@@ -74,6 +77,7 @@ export function DropdownMenu({ item, label }: DropdownMenuProps) {
                         {link.name}
                     </Link>
                 ))}
+                {children}
             </div>
         </div >
     )

@@ -19,7 +19,7 @@ export function NavLink({ href, children }: NavLinkProps) {
         <Link
             href={href}
             className={clsx(
-                'px-4 py-2 text-sm flex items-center w-fit rounded-full font-medium transition ease-out duration-300 whitespace-nowrap',
+                'px-4 py-2 text-sm flex items-center w-fit rounded-full font-medium transition-[background-color] ease-in-out duration-150 whitespace-nowrap',
                 isActive
                     ? 'bg-foreground text-background'
                     : 'bg-transparent text-foreground hover:bg-foreground hover:text-background',

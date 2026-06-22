@@ -1,9 +1,9 @@
-import { Hero } from "@/components/hero";
+import { Hero } from "@/components/section/hero";
 
 export default function Custom404() {
     return (
         <Hero
-            tagline="NOT FOUND"
+            hasTagline={false}
             heading="Pagina niet gevonden"
             description="De pagina die je zoekt bestaat niet of is veranderd."
             buttonLabel="Ga naar home"

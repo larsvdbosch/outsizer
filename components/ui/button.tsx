@@ -10,11 +10,11 @@ const ButtonSizes: Record<ButtonSize, string> = {
 };
 
 const BaseStyles =
-    "flex items-center w-fit rounded-full font-medium transition ease-out duration-300 active:scale-95";
+    "flex items-center w-fit rounded-full font-medium transition-[scale,background-color] ease-in-out duration-150 active:scale-95";
 
 const ButtonVariants: Record<ButtonVariant, string> = {
-    solid: "bg-accent text-background",
-    black: "bg-foreground text-background",
+    solid: "bg-accent text-background hover:bg-[#005CEF]",
+    black: "bg-foreground text-background hover:bg-[#181818]",
 };
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
