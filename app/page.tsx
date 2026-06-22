@@ -1,8 +1,10 @@
 import { Hero } from "@/components/section/hero";
+import { Navbar } from "@/components/section/navbar";
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <Navbar />
       <Hero
         hasTagline={true}
         tagline="BETA JUST RELEASED"
@@ -11,6 +13,6 @@ export default function Home() {
         buttonLabel="Probeer het nu"
         buttonHref="/aanmelden"
       />
-    </div>
+    </>
   );
 }
